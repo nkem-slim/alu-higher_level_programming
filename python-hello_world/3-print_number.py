@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98
+number = "Holberton"
 print(f"{number} Battery street")
