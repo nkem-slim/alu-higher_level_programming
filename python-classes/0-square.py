@@ -1,3 +1,10 @@
 #!/usr/bin/python3
+""" This module contains one class
+
+"""
+
 class Square:
-	pass
+    """ This is an empty class
+
+    """
+    pass
