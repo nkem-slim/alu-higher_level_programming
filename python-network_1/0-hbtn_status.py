@@ -10,6 +10,6 @@ with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
     retrieved = response.read()
 
 print("Body response:")
-print("\t- type: {}".format(retrived))
+print("\t- type: {}".format(type(retrived)))
 print("\t- content: {}".format(retrieved))
 print("\t- utf8 content: {}".format(retrieved.decode('utf-8')))
