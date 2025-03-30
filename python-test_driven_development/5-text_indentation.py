@@ -1,6 +1,8 @@
-#!/usr/bin/python3
+#!usr/bin/python3
 """
+
 Contains one module
+
 """
 
 
@@ -8,17 +10,20 @@ def text_indentation(text):
     """
     Prints a text with two new lines after each of these characters: ., ? and :
     """
-    if type(text) is not str:
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     delimiters = ['.', '?', ':']
+    i = 0
     length = len(text)
 
-    output = []
-    for i in range(length):
-        output.append(text[i])
+    while i < length:
+        print(text[i], end="")
         if text[i] in delimiters:
-            output.append("\n")
-            print(''.join(output).lstrip())
-            output = []
-    print(''.join(output).lstrip())
+            print("\n")
+            # Skip any spaces after the delimiter
+            i += 1
+            while i < length and text[i] == ' ':
+                i += 1
+            continue
+        i += 1
