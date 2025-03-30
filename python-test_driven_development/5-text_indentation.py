@@ -20,7 +20,7 @@ def text_indentation(text):
     while i < length:
         print(text[i], end="")
         if text[i] in delimiters:
-            print("\n\n")
+            print("\n")
             # Skip any spaces after the delimiter
             i += 1
             while i < length and text[i] == ' ':
