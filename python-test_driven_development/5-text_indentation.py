@@ -19,6 +19,6 @@ def text_indentation(text):
         output.append(text[i])
         if text[i] in delimiters:
             output.append("\n")
-            print(''.join(output).lstrip())
+            print(''.join(output).strip())
             output = []
-    print(''.join(output).lstrip())
+    print(''.join(output).strip())
