@@ -7,9 +7,9 @@ Python script  script that takes in a URL and an email address, sends a POST req
 if __name__ == '__main__':
     import requests
     import sys
-    
-    url = sys.args[1]
-    email = sys.args[2]
+
+    url = sys.argv[1]
+    email = sys.argv[2]
     data = {'email': email}
     retrieved = requests.post(url, data)
     print(retrieved.text)
