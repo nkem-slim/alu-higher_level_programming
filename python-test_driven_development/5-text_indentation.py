@@ -1,7 +1,8 @@
-#!/usr/bin/python3
+#!usr/bin/python3
 """
 Contains one module
 """
+
 
 def text_indentation(text):
     """
@@ -10,18 +11,14 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    delimiters = {'.', '?', ':'}
-    output = ""
-    i = 0
-    while i < len(text):
-        output += text[i]
-        if text[i] in delimiters:
-            output += "\n\n"
-            # Skip all spaces after punctuation
-            i += 1
-            while i < len(text) and text[i] == " ":
-                i += 1
-            continue
-        i += 1
+    delimiters = ['.', '?', ':']
+    length = len(text)
 
-    print(output.strip())
+    output = []
+    for i in range(length):
+        output.append(text[i])
+        if text[i] in delimiters:
+            output.append("\n\n")
+            print(''.join(output).lstrip())
+            output = []
+    print(''.join(output).lstrip())
