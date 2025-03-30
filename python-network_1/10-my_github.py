@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     username = sys.argv[1]
     password = sys.argv[2]
-    url = f"https://api.github.com/users/{username}"
+    url = "https://api.github.com/users/{}".format(username)
     """
     headers = {"Authorization": f"Basic {username}:{password}"}
     """
