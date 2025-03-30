@@ -12,7 +12,7 @@ Import:
 My name is John Smith
 
 >>> say_my_name("John")
-My name is John 
+My name is John
 
 >>> say_my_name()
 Traceback (most recent call last):
@@ -27,7 +27,22 @@ Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
 
->>> say_my_name("JOHN", awedfe)
+>>> say_my_name("JOHN", None)
 Traceback (most recent call last):
 ...
-NameError: name 'awedfe' is not defined
+TypeError: last_name must be a string
+
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(["John"], "Doe")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("John", ["Doe"])
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
