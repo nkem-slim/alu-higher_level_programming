@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-A Python script that fetches https://alu-intranet.hbtn.io/status
+A Python script that fetches http://0.0.0.0:5050/status
 
 """
 
 
 import urllib.request
-with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
+with urllib.request.urlopen('http://0.0.0.0:5050/status') as response:
     retrieved = response.read()
 
 print("Body response:")
