@@ -160,3 +160,4 @@ class Base:
             for _ in range(4):
                 line.forward(Square.size)
                 line.right(90)
+                
